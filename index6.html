@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRC Responsive Website</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="index2.html">
+    <link rel="stylesheet" href="index3.html">
+    <link rel="stylesheet" href="index4.html">
+    <link rel="stylesheet" href="index5.html">
+    <link rel="stylesheet" href="index7.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@400;500&display=swap');
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html{
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 6rem;
+        scroll-behavior: smooth;
+    }
+
+section{
+            padding: 2rem 9%;
+        }
+
+:root{
+        --orange: #ffa500;
+    }        
+
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+}
+
+.heading span.space{
+    background: none;
+}
+
+.btn{
+    
+    background: var(--orange);
+     padding: 10px 24px;
+     font-weight: 500;
+     font-size: 16px;
+     color: #ffff;
+     border: none;
+     transition: all 1s
+ }
+ 
+ .btn:hover{
+     padding: 10px 68px;
+     border-radius: 10px;
+     background-color: tomato;
+     transform: skew(2);
+ }
+ 
+ .btn i{
+     margin-left: 7px;
+ }
+ 
+ .btn:hover i{
+     transform: scale(1.5) rotate(180deg);
+     color: black;
+     margin-left: 7px;
+ }
+                            
+ #menu-bar{
+    color: black;
+    border: .1rem solid black;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: whitesmoke;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+header .logo{
+    width: 10%;
+    padding-bottom: 2%;
+
+}
+
+header .nav-bar a{
+    color: black;
+    font-size: 2rem;
+    margin: 0 .8rem;
+}
+
+header .nav-bar a:hover{
+    color: var(--orange);
+} 
+
+header .icons i{
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+header .icons i:hover{
+    color: var(--orange);
+}
+.login-form-container{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container.active{
+    top: 0;
+}
+
+.login-form-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;   
+}
+
+.login-form-container form h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.login-form-container form .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+
+.login-form-container form .box:focus{
+    border-color: var(--orange);;
+}
+
+.login-form-container form #remember{
+    margin: 2rem 0;
+}
+
+.login-form-container form label{
+    font-size: 1.5rem;
+}
+
+.login-form-container form .btn{
+    display: block;
+    width: 100%;
+}
+
+.login-form-container form p{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.login-form-container form p a{
+    color: var(--orange);   
+}
+
+.login-form-container form p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+
+.login-form-container #form-close{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.management-team{
+    margin-top: 15rem;
+}
+
+.management-team .swiper-slide{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.management-team .box{
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.management-team .box img{
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.management-team .box h3{
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.management-team .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.management-team .box p span{
+    font-weight: bold;
+}
+
+.footer{
+    background: #333;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: .7rem 0;
+    color: #fff;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+    color: var(--orange);
+}
+    </style>
+
+    <title>management team</title>
+</head>
+<body>
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <img class="logo" src="images/logo/innovative-research-consultancy_logo (1).png" alt="">
+
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="index2.html">About Us</a>
+        <a href="index4.html">Services</a>
+        <a href="index3.html">Mission</a>
+        <a href="index5.html">Projects</a>
+        <a href="#management_team">Management Team</a>
+        <a href="index7.html">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+        <!-- <i class="fas fa-search" id="search-btn"></i> -->
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+    </header>
+
+    <div class="login-form-container">
+        <i class="fas fa-time" id="form-close"></i>
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="enter your mail">
+            <input type="password" class="box" placeholder="enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="#">register now</a></p>
+        </form>
+    </div>
+    <section class="management-team" id="management-team">
+        <h1 class="heading">
+            <span>M</span>
+            <span>A</span>
+            <span>N</span>
+            <span>G</span>
+            <span>E</span>
+            <span>M</span>
+            <span>E</span>
+            <span>N</span>
+            <span>T</span>
+            <span class="space"></span>
+            <span>T</span>
+            <span>E</span>
+            <span>A</span>
+            <span>M</span>
+        </h1>
+
+        <div class="swiper-container management">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="images/team/pic1.png" alt="">
+                        <h3>SITARA JABEEN LUNA</h3>
+                        <p><span>Chairperson</span>(BSS-Hons., MSS-Economics)</p>
+                    </div>
+                </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/team/pic2.png" alt="">
+                            <h3>HASAN MAHMUD</h3>
+                            <p><span>Managing Director</span>(Bsc Engineer-Electrical & Electronic, MBA-IBA)</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/team/pic3.png" alt="">
+                            <h3>ZAREEN FARHANA</h3>
+                            <p><span>Director, Customer Service</span>(BBA-University of Northern Virginia, London)</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="box">
+                            <img src="images/team/pic4.png" alt="">
+                            <h3>REJWANUR RASHID</h3>
+                            <p><span>Director, Marketing</span>(BBA-University of Northern Virginia, London)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>about us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae aspernatur aliquid, eius suscipit non quis enim omnis sint ab voluptate alias repudiandae. Id, sint quia repellendus minima et voluptatum nobis?</p>
+                </div>
+                <div class="box">
+                    <h3>branch locations</h3>
+                    <a href="https://www.google.com.bd/maps/place/Innovative+Research+%26+Consultancy+Limited/@23.7823922,90.3960925,15z/data=!4m5!3m4!1s0x3755c70d08f3e535:0xea38eabf0d9f8e81!8m2!3d23.7854584!4d90.4001643?hl=en" target="_blank">Bangladesh</a>
+                    <a href="#">India</a>
+                    <a href="#">USA</a>
+                    <a href="#">Japan</a>
+                </div>
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#home">home</a>
+                    <a href="about us/index2.html">about us</a>
+                    <a href="services/index4.html">services</a>
+                    <a href="mission/index3.html">mission</a>
+                    <a href="projects/index5.html">projects</a>
+                    <a href="management team/index6.html">management team</a>
+                    <a href="#contact-us">contact us</a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="https://www.facebook.com/dreamfull.sayam/" target="_blank">facebook</a>
+                    <a href="https://www.instagram.com/mdsalman_rahman/?fbclid=IwAR0_fdyr6NcDg45PsaE0qsO68LOLADf8_k4YBgaLFICmvrPfG5pyjb1-210" target="_blank">instagram</a>
+                    <a href="https://www.linkedin.com/in/md-salman-rahman-8188651b4/?fbclid=IwAR3Tgi-wv954iyPVQHYtLRB4L-HPfrW7wQceHvZLOhiYx--8xLX80uS0IhA" target="_blank">linkedin</a>
+                    <a href="https://twitter.com/MDSalma20745605?fbclid=IwAR2_ORHIBBzzIws1HQS8ev7ZDNjHuF3ZpNU7sgClXuUW6Lxns-yoB0wdAnw target_blank" target="_blank">twitter</a>
+                </div>
+            </div>
+            <h1 class="credit">created by <span>irc web desginer</span> | all rights reserved!</h1>
+        </section>
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> 
+    <script src="management/script.js"></script>
+</body>
+</html>
