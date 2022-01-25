@@ -55,26 +55,3 @@ var swiper = new Swiper(".brand-slider", {
         },
     },
 });
-
-
-// let i = 0;
-// let index = 0;
-// let slider = document.getElementsByClassName("slider");
-
-// function show(n) {
-//   for (i = 0; i < slider.length; i++) {
-//     slider[i].style.display = "none";
-//   }
-
-//   slider[n - 1].style.display = "block";
-// }
-// auto();
-
-// function auto() {
-//   index++;
-//   if (index > slider.length) {
-//     index = 1;
-//   }
-//   show(index);
-//   setTimeout(auto, 3000);
-// }
