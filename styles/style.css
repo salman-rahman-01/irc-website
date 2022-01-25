@@ -299,7 +299,7 @@ color: var(--orange);
 }
 
 
-.home .img-container img{
+.home .video-container video{
     position: absolute;
     top: 0;
     left: 0;
@@ -317,7 +317,7 @@ color: var(--orange);
     top: 10rem;
 }
 
-.home .controls .img-btn{
+.home .controls .vid-btn{
     height: 1.5rem;
     width: 1.5rem;
     display: inline-block;
@@ -327,7 +327,7 @@ color: var(--orange);
     margin: 0 .5rem;
 }
 
-.home .controls .img-btn.active{
+.home .controls .vid-btn.active{
     background: var(--orange);
 }
 /* home section ends */
