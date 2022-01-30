@@ -100,24 +100,95 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
+    padding: 4rem 9%;
 }
 
-header .logo{
-    width: 10%;
-    padding-bottom: 2%;
-
+header .nav-bar ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    gap: 40px;
 }
 
-header .nav-bar a{
+header .nav-bar ul li{
+    list-style: none;
+    text-align: center;
+    display: block;
+    
+}
+
+header .nav-bar ul li:last-child{
+    border-right: none;
+}
+
+header .nav-bar ul li a{
+    text-decoration: none;
+    /* padding: 0 50px;
+    display: block; */
     color: black;
     font-size: 2rem;
     margin: 0 .8rem;
 }
 
-header .nav-bar a:hover{
-    color: var(--orange);
-} 
+header .nav-bar ul li a .icon{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+
+header .nav-bar ul li a .icon .fas{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 34px;
+    transition: 0.5s;
+    color: #000;
+}
+
+header .nav-bar ul li a .icon .fas:last-child{
+    color: #e91e63;
+}
+
+header .nav-bar ul li a:hover .icon .fas{
+    transform: translateY(-100%);
+}
+
+header .nav-bar ul li a .name{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+header .nav-bar ul li a .name span{
+   display: block;
+   position: relative;
+   color: #000;
+   font-size: 18px;
+   line-height: 20px; 
+   transition: 0.5s;
+}
+
+header .nav-bar ul li a .name span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #e91e63;
+}
+
+header .nav-bar ul li a:hover .name span{
+    transform: translateY(20px);
+}
 
 header .icons i{
     font-size: 2.5rem;
@@ -250,7 +321,7 @@ header .icons i:hover{
     margin-top: 5rem;
     font-size: 4.5rem;
     text-transform: uppercase;
-    text-shadow: 0 .3rem .5rem whitesmoke;
+    color: #fff;
 }
 
 .home .content p{
@@ -258,7 +329,7 @@ header .icons i:hover{
     padding: .5rem 0;
     text-align: center;
     margin-bottom: 2rem;
-    text-shadow: 0 .3rem .5rem whitesmoke;
+    color: #fff;
 }
 
 
@@ -294,7 +365,6 @@ header .icons i:hover{
     background: var(--orange);
 }
 /* home section ends */
-
 
 .row{
     margin-top: 2rem;
@@ -414,14 +484,6 @@ header .icons i:hover{
         background: white;
     }
 
-    header .logo{
-        width: 20%;
-        
-    
-    }
-
-    
-
 }
 
 @media (max-width:450px) {
@@ -433,9 +495,4 @@ header .icons i:hover{
         font-size: 2.5rem;
     }
 
-    header .logo{
-        width: 10%;
-        padding-bottom: 2%;
-    
-    }
 }
